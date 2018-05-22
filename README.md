@@ -5,11 +5,11 @@
 ## comandos iniciais
 
 ``` bash
-`composer install`  
+composer install  
 # copiar e renomear o `.env.example` para `.env`  
-# criar arquivo `database.sqlite` na pasta `database`  
-`php artisan migrate`  
-`php artisan passport:install`  
-`php artisan serve`  
 
+# criar arquivo `database.sqlite` na pasta `database`  
+php artisan migrate  
+php artisan passport:install  
+php artisan serve  
 ```
