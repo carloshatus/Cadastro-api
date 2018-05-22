@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(['prefix' => 'cadastro'], function(){	
+	Route::post('/create', ['uses' => 'CadastroController@create']);
+	Route::get('/getAll', ['uses' => 'CadastroController@getAll']);
+	Route::get('/getById/{id}', ['uses' => 'CadastroController@getById']);
+});	

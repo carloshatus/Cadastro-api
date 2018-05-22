@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Cadastro;
 use Illuminate\Http\Request;
 
@@ -9,46 +10,20 @@ class CadastroController extends Controller
 {
     public function create(Request $request)
     {
-        $cadastro = Cadastro::create($request);
+        $dados = $request->all();
+        $cadastro = Cadastro::create($dados);
         return json_encode($cadastro);
     }
     
-    public function getById(Cadastro $cadastro)
+    public function getById($id)
     {
-        //
+        $cadastro = Cadastro::find($id);
+        return json_encode($cadastro);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Cadastro  $cadastro
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Cadastro $cadastro)
+    public function getAll()
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Cadastro  $cadastro
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Cadastro $cadastro)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Cadastro  $cadastro
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Cadastro $cadastro)
-    {
-        //
+        $cadastro = Cadastro::all();
+        return json_encode($cadastro);
     }
 }
