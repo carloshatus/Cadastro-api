@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Cadastro;
-use Illuminate\Http\Request;
+use App\Http\Requests\CadastroRequest;
 
 class CadastroController extends Controller
 {
-    public function create(Request $request)
+    public function create(CadastroRequest $request)
     {
         $dados = $request->all();
         $cadastro = Cadastro::create($dados);
