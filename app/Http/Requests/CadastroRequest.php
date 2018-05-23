@@ -26,11 +26,7 @@ class CadastroRequest extends FormRequest
         return [
             'nome' => ['required'],
             'email' => ['nullable','email'],
-            'data_nascimento' => ['nullable','date'],
-            'cep' => ['nullable'],
-            'telefone' => ['nullable'],
-            'cpf' => ['nullable'],
-            'rg' => ['nullable'] 
+            'data_nascimento' => ['nullable','date']
         ];
     }
 }
