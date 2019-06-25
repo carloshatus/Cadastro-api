@@ -2,6 +2,8 @@
 
 > Api de cadastros em Laravel
 
+Curso "Introdução ao Laravel com vue.js" apresentado na XI edição do [simSIS](http://www.sisftc.com.br/simsis/) (Simpósio de Sistemas de Informação) 23 de maio de 2018.
+
 ## comandos iniciais
 
 ``` bash
